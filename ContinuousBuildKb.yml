@@ -4,9 +4,7 @@
 # https://aka.ms/yaml
 
 variables:
-  #Pipeline config variables:
-  EXEC_AGENT: $(agent)
-
+ 
   #Environment variables: 
   MSBUILD: $(msbuildpath)
   BL_PATH: $(genexus)
@@ -47,7 +45,7 @@ trigger:
   - main
 
 pool:
-  name: $(EXEC_AGENT)
+  name: $(POOL)
 
 jobs:
   - job: CheckoutOrUpdate
